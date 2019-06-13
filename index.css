@@ -1,0 +1,405 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* ============ Code Starts Here ================ */
+
+.container {
+    max-width: 876px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    /* display: flex;
+	flex-direction: column; */
+}
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+nav {
+    width: 69%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: gray;
+    font-size: 14px;
+}
+
+/* Method to use Order */
+/* header a {
+	order: 99;
+} */
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 20%;
+}
+
+.cta {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 90px 0;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+}
+
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-text h1 {
+    text-align: center;
+    font-size: 77px;
+}
+
+.cta-text button {
+    width: 50%;
+    height: 33px;
+    background-color: white;
+    color: black;
+    border: px solid gray;
+    cursor: pointer;
+}
+
+.top-content {
+    display: flex;
+    justify-content: space-around;
+}
+.top-content .text-content {
+    width: 49%;
+    padding: 30px 0;
+}
+
+.main-content img {
+    width: 100%;
+}
+
+.bottom-content {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid gray;
+    margin-bottom: 30px;
+}
+
+.bottom-content .text-content {
+    width: 32%;
+    padding: 30px 0;
+}
+
+.contact {
+    padding-left: 1%;
+}
+.contact p {
+    padding-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+/* For Permanent Nav Bar */
+
+/* header {
+	position: fixed;
+	background-color: beige;
+	border-radius: 10px;
+}
+
+.cta {
+	padding-top: 115px;
+} */
+
+input,
+label {
+    display: none;
+}
+
+label .logo {
+    display: initial;
+}
+
+@media (max-width: 840px) {
+    .container {
+        max-width: 800px;
+        width: 100%;
+        background: lightblue;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* height: 80px; */
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 25px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .cta {
+        display: flex;
+        justify-content: space-around;
+        /* height: 350px; */
+    }
+    .cta img {
+        display: none;
+    }
+}
+
+/* ============ Mobile View ================ */
+
+@media (max-width: 700px) {
+    body {
+        background: lightgoldenrodyellow;
+    }
+    .container {
+		background: lightgoldenrodyellow;
+		max-width: 500px;
+        min-width: 400px;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav a {
+        height: 40px;
+        border-top: 2px solid lightgray;
+        width: 100%;
+        text-align: center;
+        line-height: 35px;
+    }
+
+    nav a:last-child {
+        border-bottom: 2px solid lightgray;
+    }
+
+    nav a:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .logo {
+        padding-right: 10px;
+        float: right;
+        width: 40%;
+    }
+
+    .cta {
+        padding: 40px 0;
+    }
+
+    .top-content,
+    .bottom-content {
+        flex-direction: column;
+    }
+    .top-content .text-content,
+    .bottom-content .text-content {
+        width: 100%;
+    }
+
+    /* =========== Collapsible Menu ================ */
+    input,
+    label {
+        display: inline-block;
+        width: 95%;
+	}
+
+	.logo2 {
+		display: none;
+	}
+
+    label {
+        /* font-family: 'Sedgwick Ave Display', cursive; */
+        font-size: 30px;
+        display: block;
+        cursor: pointer;
+        background: url(./img/menu.svg) no-repeat left center;
+        padding: 6px 0 6px 60px;
+    }
+    input#menu {
+        display: none;
+    }
+
+    .menu-content {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    input:checked ~ label {
+        background-image: url(./img/close.svg);
+    }
+    input:checked ~ .menu-content {
+        max-height: 100%;
+    }
+}
